@@ -16,6 +16,7 @@ builder.Services.AddPersistence(connectionString);
 builder.Services.AddKafkaMessaging(builder.Configuration);
 builder.Services.AddHealthChecks();
 builder.Services.AddScoped<RegisterPaymentUseCase>();
+builder.Services.AddScoped<GetPaymentsByCustomerUseCase>();
 builder.Services.AddScoped<GetPaymentByIdUseCase>();
 
 var app = builder.Build();

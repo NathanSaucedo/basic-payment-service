@@ -13,7 +13,7 @@ Comandos Kafka local
 
 
 Crear un tópico
-kafka-topics --create --topic payments.utility.services --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+kafka-topics --create --topic payments.basic.services --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
 
 
 Listar tópicos
@@ -21,16 +21,15 @@ kafka-topics --list --bootstrap-server localhost:9092
 
 
 Eliminar un tópico
-kafka-topics --delete --topic payments.utility.services --bootstrap-server localhost:9092
+kafka-topics --delete --topic payments.basic.services --bootstrap-server localhost:9092
 
 
 Describir un tópico
-kafka-topics --describe --topic payments.utility.services --bootstrap-server localhost:9092
-
+kafka-topics --describe --topic payments.basic.services --bootstrap-server localhost:9092
 
 Consumir mensajes de un tópico
-kafka-console-consumer --topic payments.utility.services --bootstrap-server localhost:9092
+kafka-console-consumer --topic payments.basic.services --bootstrap-server localhost:9092
 
 
 Producir mensajes a un tópico
-kafka-console-producer --topic payments.utility.services --bootstrap-server localhost:9092
+kafka-console-producer --topic payments.basic.services --bootstrap-server localhost:9092
