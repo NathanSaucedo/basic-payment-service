@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/Source/" />
+  <Folder Name="/Source/Apps/">
+    <Project Path="BasicPaymentsService.Consumer/BasicPaymentsService.Consumer.csproj" />
+    <Project Path="BasicPaymentsService.WebApi/BasicPaymentsService.WebApi.csproj" />
+  </Folder>
+  <Folder Name="/Source/Contexts/">
+    <Project Path="BasicPaymentsService.Application/BasicPaymentsService.Application.csproj" />
+    <Project Path="BasicPaymentsService.Domain/BasicPaymentsService.Domain.csproj" />
+  </Folder>
+  <Folder Name="/Source/Infrastructure/">
+    <Project Path="BasicPaymentsService.Infrastructure/BasicPaymentsService.Infrastructure.csproj" />
+  </Folder>
+</Solution>
