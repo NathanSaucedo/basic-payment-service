@@ -25,17 +25,17 @@ namespace BasicPaymentsService.WebApi.Controllers.v1
             }
         }
 
-        [HttpGet("{paymentId:guid}")]
-        public async Task<IActionResult> GetPaymentById([FromRoute] Guid paymentId, [FromServices] GetPaymentByIdUseCase useCase)
+        [HttpGet]
+        public async Task<IActionResult> GetPayments([FromQuery] Guid customerId, [FromServices] GetPaymentsByCustomerUseCase useCase)
         {
             try
             {
-                var result = await useCase.ExecuteAsync(paymentId);
-                return Ok(result);
+                var list = await useCase.ExecuteAsync(customerId);
+                return Ok(list);
             }
             catch (ArgumentException ex)
             {
-                return NotFound(new { error = ex.Message });
+                return BadRequest(new { error = ex.Message });
             }
         }
     }
